@@ -1,0 +1,398 @@
+$light-color: #fbfbfb;
+$primary-color: #343a40;
+$secondary-color: #08B3E6;
+$misty-rose: #e14b56;
+$misty-rose-light: #f76f55;
+$orange: #f8a255;
+$white-color: white;
+$border-radius: 5px;
+$black-color: black;
+
+
+.app {
+  height: 100vh;
+
+  .error {
+    color: red;
+    font-size: 13px;
+  }
+
+  &-header {
+    height: 120px;
+    background-color: $white-color;
+    display: flex;
+    align-items: center;
+
+    &__container {
+      width: 60%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .logo {
+        font-size: 72px;
+        margin-right: 20px;
+        fill: $orange;
+      }
+      .nav {
+        p {
+          color: $secondary-color;
+          font-size: 1.4rem;
+          cursor: pointer;
+          transition: .2s;
+          &:hover {
+            color: darken($secondary-color, 10);
+          }
+        }
+      }
+      .title {
+        font-size: 3rem;
+        color: $white-color;
+      }
+    }
+  }
+
+  &-main {
+    background-color: transparentize($secondary-color, .9);
+    min-height: calc(100vh - 120px);
+
+    &__container {
+      padding: 30px 0px;
+      width: 70%;
+      max-width: 900px;
+      min-width: 350px;
+      margin: 0 auto;
+
+      .cv-drop-from {
+        background-color: $white-color;
+        border-radius: $border-radius;
+        padding: 3em 2em;
+
+        .tech-input-group {
+          input {
+            margin-right: 20px;
+          }
+
+          .experience {
+            margin: 0;
+            width: 80px;
+          }
+
+          .add-more-button {
+            padding: 10px;
+            border: none;
+            background-color: $secondary-color;
+            color: white;
+            cursor: pointer;
+            border-radius: 3px;
+            outline: none;
+          }
+        }
+
+
+        .tech-list {
+          display: flex;
+          font-size: 12px;
+          flex-wrap: wrap;
+          margin-bottom: 5px;
+          li {
+            background-color: rgba(black, .1);
+            margin: 4px 3px;
+            padding: 3px 6px;
+            display: flex;
+            align-items: center;
+            border-radius: 3px;
+            span:not(:last-child) {
+              margin-right: 5px;
+            }
+            .close-icon {
+              cursor: pointer;
+              color: rgba(red, .55);
+              transition: .3s;
+              &:hover {
+                color: red;
+              }
+            }
+          }
+        }
+        
+
+        .input-control {
+          padding: 10px 20px;
+          display: flex;
+          flex-direction: column;
+
+          &.terms {
+            display: flex;
+            flex-direction: row;
+
+            input {
+              margin-right: 10px;
+              margin-top: 5px;
+            }
+          }
+
+          .cv-upload {
+            background-color: $light-color;
+            border: 2px dashed $secondary-color;
+            cursor: pointer;
+            height: 90px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 3px;
+            transition: .2s;
+            z-index: 300;
+
+            &.highlight {
+              background-color: transparentize($secondary-color, .9);
+            }
+
+            .upload-icon {
+              font-size: 32px;
+              fill: $secondary-color;
+            }
+            span {
+              margin-left: 15px;
+            }
+          }
+
+          label {
+            font-weight: 600;
+            margin-bottom: 4px;
+          }
+
+          input, textarea, select {
+            padding: 10px 15px;
+            border: none;
+            outline: none;
+            border-radius: 3px;
+            border: 1px solid transparentize($secondary-color, .7);
+            background-color: $light-color;
+
+            &:focus {
+              border: 1px solid transparentize($secondary-color, .2);
+            }
+          }
+
+          textarea {
+            resize: none;
+          }
+        }
+        .button-container {
+          padding: 10px 20px;
+
+          .send-button {
+            padding: 10px 20px;
+            border: none;
+            background-color: $secondary-color;
+            cursor: pointer;
+            border-radius: 3px;
+            font-size: 20px;
+            font-weight: 600;
+            color: $white-color;
+
+            &.disabled {
+              background-color: grey;
+              cursor: auto;
+            }
+          }
+          
+        }
+      }
+    }
+  }
+
+  &-footer {
+    height: 250px;
+    background-color: $primary-color;
+    color: white;
+    .copyright {
+      text-align: center;
+      font-size: 15px;
+
+    }
+
+    &__container {
+      display: flex;
+      justify-content: flex-end;
+      width: 50%;
+      margin: 0 auto;
+      padding: 30px 0px;
+      color: white;
+
+      .contact-us {
+        h3 {
+          font-size: 23px;
+          margin-bottom: 10px;
+        }
+
+
+
+        p {
+          line-height: 1.8;
+          span {
+            margin-right: 10px;
+          }
+          .contact-us-icon {
+            vertical-align: middle;
+          }
+
+          a {
+            color: white;
+          }
+        }
+      }
+
+      .logo {
+        fill: $secondary-color;
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+
+#success_tic .checkmark-circle {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  display: inline-block;
+}
+.checkmark-circle .background {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: #1ab394;
+  position: absolute;
+}
+#success_tic .checkmark-circle .checkmark {
+  border-radius: 5px;
+}
+#success_tic .checkmark-circle .checkmark.draw:after {
+  -webkit-animation-delay: 300ms;
+  -moz-animation-delay: 300ms;
+  animation-delay: 300ms;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease;
+  -moz-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-name: checkmark;
+  -moz-animation-name: checkmark;
+  animation-name: checkmark;
+  -webkit-transform: scaleX(-1) rotate(135deg);
+  -moz-transform: scaleX(-1) rotate(135deg);
+  -ms-transform: scaleX(-1) rotate(135deg);
+  -o-transform: scaleX(-1) rotate(135deg);
+  transform: scaleX(-1) rotate(135deg);
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+#success_tic .checkmark-circle .checkmark:after {
+  opacity: 1;
+  height: 75px;
+  width: 37.5px;
+  -webkit-transform-origin: left top;
+  -moz-transform-origin: left top;
+  -ms-transform-origin: left top;
+  -o-transform-origin: left top;
+  transform-origin: left top;
+  border-right: 15px solid #fff;
+  border-top: 15px solid #fff;
+  border-radius: 2.5px !important;
+  content: '';
+  left: 35px;
+  top: 80px;
+  position: absolute;
+}
+
+@-webkit-keyframes checkmark {
+  0% {
+    height: 0;
+    width: 0;
+    opacity: 1;
+  }
+  20% {
+    height: 0;
+    width: 37.5px;
+    opacity: 1;
+  }
+  40% {
+    height: 75px;
+    width: 37.5px;
+    opacity: 1;
+  }
+  100% {
+    height: 75px;
+    width: 37.5px;
+    opacity: 1;
+  }
+}
+@-moz-keyframes checkmark {
+  0% {
+    height: 0;
+    width: 0;
+    opacity: 1;
+  }
+  20% {
+    height: 0;
+    width: 37.5px;
+    opacity: 1;
+  }
+  40% {
+    height: 75px;
+    width: 37.5px;
+    opacity: 1;
+  }
+  100% {
+    height: 75px;
+    width: 37.5px;
+    opacity: 1;
+  }
+}
+@keyframes checkmark {
+  0% {
+    height: 0;
+    width: 0;
+    opacity: 1;
+  }
+  20% {
+    height: 0;
+    width: 37.5px;
+    opacity: 1;
+  }
+  40% {
+    height: 75px;
+    width: 37.5px;
+    opacity: 1;
+  }
+  100% {
+    height: 75px;
+    width: 37.5px;
+    opacity: 1;
+  }
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  .title {
+    margin: 10px 0;
+    font-size: 30px;
+  }
+
+  .error {
+    margin-top: 100px;
+    color: red;
+    font-size: 1.5rem;
+  }
+
+}

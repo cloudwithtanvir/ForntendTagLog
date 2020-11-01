@@ -1,0 +1,56 @@
+$light-color: #fbfbfb;
+$primary-color: #18212E;
+$secondary-color: #08B3E6;
+$misty-rose: #e14b56;
+$misty-rose-light: #f76f55;
+$orange: #f8a255;
+$white-color: white;
+$border-radius: 5px;
+$black-color: black;
+
+
+#modal-overlay {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background-color: rgba(black, .5);
+	z-index: 2000;
+}
+
+#cv-modal{
+	background-color: white;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	flex-direction: column;
+	z-index: 2000;
+	min-width: 300px;
+	min-height: 300px;
+	padding: 25px 35px;
+	box-shadow: 0 0 4px -2px rgba(white, .25);
+	animation: popup .3s ease-in;
+	border-radius: 10px;
+
+	.close-icon {
+		padding: 4px;
+		position: absolute;
+		right: 6px;
+		top: 6px;
+		cursor: pointer;
+	}
+}
+
+@keyframes popup {
+	from {
+		opacity: 0;
+		transform: translate(-50%, -60%);
+	}
+	to {
+		opacity: 1;
+		transform: translate(-50%, -50%);
+	}
+}
