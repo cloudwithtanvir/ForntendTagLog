@@ -7,7 +7,10 @@ import axios from 'axios'
 import Modal from '../components/modal'
 
 
-const baseUrl = 'http://127.0.0.1:8000/api/'
+// const baseUrl = 'http://127.0.0.1:8000/api/'
+
+const baseUrl = "http://54.254.234.228:31479/api/"
+
 
 function App() {
 
